@@ -50,7 +50,8 @@ class Contenedor {
     getAllProducts() {
         fs.readFile('./src/products.txt', 'utf8', function(err, data) {
             if (err) throw err;
-            console.log(JSON.parse(data));
+            const productos = JSON.parse(data);
+            //console.log(typeof productos);
         });
     };
 };
