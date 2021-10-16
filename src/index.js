@@ -14,7 +14,8 @@ app.get("/", (req, res) => {
 app.get("/productos", (req, res) => {
     fs.readFile("./src/products.txt", "utf-8", (err, data) => {
         if (err) throw err;
-        res.send({data});
+        const productos = JSON.parse(data);
+        res.send({productos});
     });
 });
 

@@ -30,7 +30,7 @@ class Contenedor {
     }
 
     save() {
-        fs.writeFile('./src/products.txt', JSON.stringify(products), 'utf-8', (err) => {
+        fs.writeFile('./src/products.txt', JSON.stringify(products, null, 2), 'utf-8', (err) => {
             if (err) throw "Error al escribir";
         });
     }
