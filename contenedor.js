@@ -21,6 +21,15 @@ class Container {
     }
   };
 
+  createProduct = async (productos) => {
+    try {
+      const productos = await fs.promises.readFile(this.file, "utf-8");
+      console.log(req.body);
+    } catch (err) {
+      throw "Error al crear un producto nuevo";
+    }
+  };
+
   // Devuelve un array con los objetos presentes en el archivo.
   getAllProducts = async () => {
     try {
