@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { callbackify } = require("util");
 
 class Container {
   constructor(file) {
@@ -23,7 +22,9 @@ class Container {
 
   createProduct = async (productos) => {
     try {
-      const productos = await fs.promises.readFile(this.file, "utf-8");
+      fs.appendFile("productos.txt", JSON.stringify(obj, null, 2), () => {
+        console.log("Producto creado!");
+      });
       console.log(req.body);
     } catch (err) {
       throw "Error al crear un producto nuevo";

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('templates/head') %>
+<body>
+  <h1>Prodictos:</h1>
+  <ul>
+    <% data.forEach(function(producto) {) %>
+      <li><%= producto.title %></li>
+    <% }) %>
+  </ul>
+  <a class="btn btn-primary" href="/productos/form" role="button">Agregar Producto</a>
+</body>
+</html>

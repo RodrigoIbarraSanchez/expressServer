@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('templates/head') %>
+<body>
+  <div class="container">
+    <a class="btn btn-primary" href="/productos/" role="button">Productos</a>
+    <form action="form" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Thumbnail</label>
+        <input type="text" class="form-control" name="thumbnail" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+</body>
+</html>

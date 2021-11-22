@@ -13,6 +13,10 @@ app.use("/static", express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Engine
+app.set("views", "./public/views");
+app.set("view engine", "ejs");
+
 let con1 = new Container("./productos.txt");
 
 app.get("/", (req, res) => {

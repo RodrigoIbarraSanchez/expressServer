@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('templates/head') %>
+<body>
+  <div class="container p-5">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to the App Coder Backend</h1>
+      <p class="lead">This application is for administraton users.</p>
+      <hr class="my-4">
+      <p>CoderHouse - Backend</p>
+
+      <h1>Productos:</h1>
+      <ul>
+        <% data.forEach(function(producto){ %>
+          <li><%= producto.title %></li>
+        <% }) %>
+      </ul>
+      <a class="btn btn-primary" href="/productos/form" role="button">Agregar Producto</a>
+    </div>
+  </div>
+</body>
+</html>
